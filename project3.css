@@ -1,0 +1,288 @@
+*{
+    font-family: poppins,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://thuthuatnhanh.com/wp-content/uploads/2022/06/Hinh-nen-iPad-4K.jpg')
+no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color:   transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+h1{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+.navigation a{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navigation .loginbtn{
+    padding: 10px 37px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-left: 40px;
+}
+.navigation .loginbtn:hover{
+    background: linear-gradient(to top right,#7f00ff,pink);
+    color: #162938;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    left:0;
+    bottom: -4px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+.navigation a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease,height 0.2s ease;
+}
+.wrapper.active {
+    height: 520px;
+}
+.wrapper.active .loginbox{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper.active .registerbox{
+    transform: translateX(0px);
+    transition: transform 0.2s ease;
+}
+.wrapper .loginbox{
+    width: 100%;
+    padding: 40px 50px;
+    transition: transform 0.2s ease;
+}
+.wrapper .registerbox{
+    width: 100%;
+    padding: 40px 50px;
+    position: absolute;
+    transform: translateX(400px);
+}
+.wrapper.popup {
+    transform: scale(1);
+}
+h2{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: #162938;
+    margin: 30px 0;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-10%);
+    font-size: 13px;
+    font-weight: 300;
+    color: #162938;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: 5px;
+}
+.input-box input{
+    width: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    height: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color:#162938;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    top: 47%;
+    right:5px;
+    color: #162938;
+    font-size: 17px;
+}
+.loginbox .remember-forgot {
+    font-size: 13px;
+    color: #162938;
+    font-weight: 500;
+    margin: 25px 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.registerbox .remember-forgot {
+    font-size: 13px;
+    color: #162938;
+    font-weight: 500;
+    margin: 25px 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: #162938;
+    font-size: 13px;
+    font-weight: 500;
+}
+.remember-forgot label{
+    display: flex;
+    flex-direction: row;
+}
+.remember-forgot label input{
+    background-color: #162938;
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+form button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 10px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #fff;
+    color: #162938;
+    outline: none;
+    border:none;
+}
+form button:active{
+    background: linear-gradient(to top right,#7f00ff,pink);
+    outline: none;
+    border: none;
+}
+form p{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 20px 0 0 0 ;
+    color: #162938;
+}
+form p a{
+    text-decoration: none;
+    margin-left: 3px;
+    color: #162938;
+    font-weight: 600;
+}
+form p a:hover{
+    text-decoration: underline;
+}
+.wrapper .closebutton{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    background-color: #162938;
+    font-size: 20px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom-left-radius: 21px;
+}
+.wrapper .closebutton:hover{
+    opacity: 0.91;
+}
+.wrapper .closebutton:active{
+    opacity: .6;
+}
+@media only screen and (max-width:740px){
+    header {
+        padding: 20px 13px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .navigation a{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .navigation .loginbtn{
+        padding: 10px 18px;
+        margin-left: 10px;
+    }
+}
+}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    header {
+        padding: 20px 20px;
+    }
+    .navigation a{
+        font-size: 18px;
+        margin-left: 18px;
+    }
+    
+}
+

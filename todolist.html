@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript pratice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: poppins,arial;
+        }
+    </style>
+</head>
+<body>
+    <input id="todo-title" type="text">
+    <input id="dueDate" type="date">
+    <button onclick="addtodo();">Add todo</button>
+    <button onclick="counter();">plus</button>
+    <button onclick="pickapples()">Pick</button>
+    <div id="plus">0</div>
+    <div id="todo-list"></div>
+    <script>
+        function counter(){
+            var value = parseInt(document.getElementById('plus').innerText);
+            value = isNaN(value) ? 0:value;
+            value++;
+            document.getElementById('plus').innerText = value;}
+            /*
+            -
+            -
+            -
+            -
+            
+         let fruits = ['cherry','apple','orange','apple','banana','apple'];
+        function pickapples(event){
+            const filter = event.target;
+            const stringf = filter.id;
+        fruits = fruits.filter(function (fruit){
+            if(fruit.id === stringf){
+                return false;}
+            else{
+                return true;}}
+        )}
+        function fruits(){
+            const huhu = document.createElement('div');
+            element.innerText = huhu;
+            document.body.appendChild(element);
+        }
+            
+            -
+            -
+            -
+            -
+            */
+        let todos = [{
+           title: 'tuan',
+           dueDate: '2004-09-09',
+           id: 'id1'
+        },{
+            title: 'dep',
+            dueDate: '2001-09-03',
+            id: 'id2'
+        },{
+            title:'trai',
+            dueDate:'2023-02-16',
+            id:'id3'}]; 
+        render();
+    function addtodo(){
+            let haha = document.getElementById('todo-title');
+            let hihi = haha.value; 
+            const datepicker = document.getElementById('dueDate');
+            const duedate = datepicker.value;
+            const id = ' ' + new Date().getTime();
+            todos.push({
+                title: hihi,
+                dueDate: duedate,
+                id:id
+            });
+        render();}
+    function render(){
+            //reset list
+        document.getElementById('todo-list').innerHTML = '';
+        //
+        todos.forEach(function (todo){
+            let element = document.createElement('div');
+            element.innerText = todo.title+ ' ' +todo.dueDate;
+            //  
+            const deletebutton = document.createElement('button');
+            deletebutton.innerText ='delete';
+            deletebutton.style = 'margin-left:12px';
+            deletebutton.onclick = deletetodo;
+            deletebutton.id = todo.id;
+            element.appendChild(deletebutton);
+            //
+            let todolist = document.getElementById('todo-list');
+            todolist.appendChild(element);
+            })}
+    function deletetodo(event){
+        const deletebutton = event.target;
+        const idtodelete = deletebutton.id;
+        todos = todos.filter(function (todo){
+            if(todo.id === idtodelete){
+                return false;
+            }
+            else{
+                return true;
+            }
+        });
+        render();
+    }
+    </script>
+</body>
+</html>
