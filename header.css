@@ -1,0 +1,180 @@
+.header{
+    height: 55px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    background-color: white;
+    z-index: 2;
+}
+.left{
+    align-items: center;
+    display:flex;
+}
+.mid{
+    flex:1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+.right{
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.head1{
+    height: 30px;
+    margin-right: 20px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+.head2{
+    height: 25px;
+    cursor: pointer;
+}
+.search-bar{
+    flex:1;
+    height: 36px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 1px rgb(0, 0, 0,0.05);
+    width: 0;
+}
+.search-bar:active{
+    border-color: rgb(166, 84, 84);
+}
+.search-bar::placeholder{
+    font-family: roboto,arial;
+}
+.search{
+    height: 40px;
+    width: 66px;
+    background-color: rgb(245, 240, 240);
+    border-width: 1px;
+    border-color: rgb(192, 192, 192);
+    border-style: solid;
+    margin-left: -1px;
+    cursor: pointer;
+    position: relative;
+
+}
+.search .tooltip{
+    position: absolute;
+    background-color: rgb(90, 88, 88);
+    color: white;
+    padding-left:8px;
+    padding-right :8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -47px;
+    pointer-events: none;
+    opacity: 0;
+    transition:0.15s;
+}
+.search:hover .tooltip{
+    opacity:1;
+}
+.searchicon{
+    height: 25px;   
+    margin-top: 4px;
+}
+.voice{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 7px;
+    background-color: rgb(244, 242, 242);
+    cursor: pointer;
+    position: relative;
+}
+.voice .tooltip{
+    position: absolute;
+    background-color: rgb(90, 88, 88);
+    color: white;
+    padding-left:8px;
+    padding-right :8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -38px;
+    pointer-events: none;
+    opacity: 0;
+    transition:0.15s;
+}
+.voice:hover .tooltip{
+    opacity:1;
+}
+.voiceicon{
+    height: 28px;
+    margin-top: 3px;
+}
+.buttonchung{
+    background-color: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+}
+.creaicon,.appicon,.notifiicon{
+    height: 25px;
+}
+.buttonchung .tooltip2{
+    position: absolute;
+    background-color: rgb(90, 88, 88);
+    color: white;
+    padding-left:8px;
+    padding-right :8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    left: -9px;
+    bottom: -47px;
+    pointer-events: none;
+    opacity: 0;
+    transition:0.15s;
+}
+.buttonchung:hover .tooltip2{
+    opacity:1;
+}
+.mychannelicon{
+    height: 35px;
+    border-radius: 19px;
+}
+.channelbutton{
+    height:50px;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.notifi{
+    position: absolute;
+    background-color: rgb(200, 0, 0);
+    font-family: roboto,arial;
+    font-size: 11px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border-radius: 10px;
+    color: white;
+    top: -2px;
+    right: 1px;
+}
