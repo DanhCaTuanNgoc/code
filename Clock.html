@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>Clock</title>
+</head>
+<style>
+    body{
+        font-family: 'Poiret One', cursive;
+        background: conic-gradient(at top right, lime, cyan);
+        background-size: cover;
+        background-position: center;
+    }
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clock{
+        border: 3px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+        --background: rgba(0, 0, 0, 0.07);
+    }
+    h1{
+        margin: 40px 25px;
+        font-weight: bold;
+        font-size: 50px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="clock">
+            <h1 id="date">MON</h1>
+            <h1 id="bar1">|</h1>
+            <h1 id="hour">04</h1>
+            <h1 id="bar2">:</h1>
+            <h1 id="minute">56</h1>
+            <h1 id="bar2">:</h1>
+            <h1 id="second">04</h1>
+            <h1 id="bar3">|</h1>
+            <h1 id="ampm">AM</h1>
+        </div>
+    </div>
+<script src="js/Clock.js"></script>
+</body>
+</html>
