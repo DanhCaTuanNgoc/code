@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .calculator{
+            width: 40%;
+            height: 50%;
+            background-color: whitesmoke;
+            overflow: hidden;
+            padding: 20px 15px;
+            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+        }
+        #userinput{
+            width: 96%;
+            height: 16.6%;
+            border: none;
+            background: whitesmoke;
+            padding: 40px 5px;
+            text-align: right;
+            font-size: 30px;
+        }
+        .btn{
+            width: 24%;
+            outline: none;
+            border: none;
+            height: 45px;
+            background: rgb(245, 242, 242);
+            margin-top: 3px;            
+        }
+        .btnequal{
+            width: 98%;
+            height: 45px;
+            border: none;
+            outline: none;
+            background-color: whitesmoke;
+            margin-top: 3px;
+        }
+        .btn:hover , .btnequal:hover{
+            background-color: rgba(185, 180, 180, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input id="userinput" placeholder="0">
+            <br>
+            <button class="btn" onclick="press(1)">1</button>
+            <button class="btn" onclick="press(2)">2</button>
+            <button class="btn" onclick="press(3)">3</button>
+            <button style="background: #ffb84d;"class="btn" onclick="press('+')">+</button>
+            <br>
+            <button class="btn" onclick="press(4)">4</button>
+            <button class="btn" onclick="press(5)">5</button>
+            <button class="btn" onclick="press(6)">6</button>
+            <button style="background: #f9c372;"class="btn" onclick="press('-')">-</button>
+            <br>
+            <button class="btn" onclick="press(7)">7</button>
+            <button class="btn" onclick="press(8)">8</button>
+            <button class="btn" onclick="press(9)">9</button>
+            <button style="background: #f5d19a;"class="btn" onclick="press('*')">*</button>
+            <br>
+            <button class="btn" onclick="press('.')">.</button>
+            <button class="btn" onclick="press(0)">0</button>
+            <button class="btn" onclick="erase()">C</button>
+            <button style="background: #f7e5ca;"class="btn" onclick="press('/')">/</button>
+            <br>
+            <button class="btnequal" onclick="equal()">=</button>
+        </div>
+    </div>
+    
+    <script src="js/Calculator.js"></script>
+
+</body>
+</html>
